@@ -1,11 +1,19 @@
 //create 16 squares
 const container = document.querySelector('.container');
 
-for (let i = 0; i < 30*30 ; i++) { 
+function createSquare() {
     const square = document.createElement('div');
     square.classList.add('square')
     container.appendChild(square);
 }
+
+function createGrid(number) {
+    for (let i = 0; i < number*number ; i++) { 
+    createSquare();
+}
+}
+
+createGrid(30);
 
 //squares change colour on hover
 
