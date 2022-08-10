@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* centre elements in body */
+}
+
+.container {
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap; /* wraps squares to next lines */
+    justify-content: center; /* centralise the grid within container */
+    align-content: center; /* only valid when flex-wrap is active, similar to align-items */
+}
+
+.square {
+    width: calc(100%/30); /* set width proportional to number of squares */
+    height: calc(100%/30); /* set height proportional to number of squares */
+}
+
+.container, .square {
+    border: 1px solid black;
+}
