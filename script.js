@@ -27,6 +27,11 @@ function createSquare(rows) {
 }
 
 //squares change colour on hover
+container.addEventListener('mouseover', changeSquareColour); // event delegation to squares
 
+function changeSquareColour(e) {
+    e.target.classList.toggle('filled');
+    console.log(e.target);
+}
 
 //extra credit - random colour change, or adding more black 

@@ -12,6 +12,11 @@ body {
     min-height: 100vh; /* centre elements in body */
 }
 
+.container,
+.square {
+    border: 1px solid black;
+}
+
 .container {
     height: 600px;
     width: 600px;
@@ -21,6 +26,10 @@ body {
     align-content: flex-end; /* only valid when flex-wrap is active, similar to align-items */
 }
 
-.container, .square {
-    border: 1px solid black;
+.square.filled {
+    background-color: black;
+}
+
+button {
+    padding: 15px;
 }
