@@ -10,19 +10,19 @@ function setNumberOfRows() {
     createGrid(rows);
 }
 
-function createGrid(number) {
+function createGrid(rows) {
     container.innerHTML = ''; // clear grid
-    if (number > 100) return alert("Please select a value 100 or less"); // keep rows within 100 or less
-    for (let i = 0; i < number*number; i++) { 
-        container.appendChild(createSquare(number));
+    if (rows > 100) return alert("Please select a value 100 or less"); // keep rows within 100 or less
+    for (let i = 0; i < (rows * rows); i++) { 
+        container.appendChild(createSquare(rows));
     }
 }
 
-function createSquare(number) {
+function createSquare(rows) {
     const square = document.createElement('div');
     square.classList.add('square');  
-    square.style.height = `calc(100%/${number})`; // set proportional height to number of squares in grid
-    square.style.width = `calc(100%/${number})`; // set proportional width to number of squares in grid
+    square.style.height = `calc(100%/${rows})`; // set proportional height to number of squares in grid
+    square.style.width = `calc(100%/${rows})`; // set proportional width to number of squares in grid
     return square;
 }
 
