@@ -11,7 +11,7 @@ function setNumberOfRows() {
 }
 
 function createGrid(rows) {
-    container.innerHTML = ''; // clear grid
+    container.textContent = ''; // clear grid
     if (rows > 100) return alert("Please select a value 100 or less"); // keep rows within 100 or less
     for (let i = 0; i < (rows * rows); i++) { 
         container.appendChild(createSquare(rows));
